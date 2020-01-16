@@ -23,15 +23,35 @@
                                     <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bzj-2F-Cdt"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZU3-ox-Sab">
+                                <rect key="frame" x="156" y="476" width="102" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i1q-mg-36H">
+                                <rect key="frame" x="154" y="505" width="106" height="30"/>
+                                <state key="normal" title="Stop Recording"/>
+                                <connections>
+                                    <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Ev-be-uqu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="znf-fN-NKu" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="JGE-kH-X21"/>
+                            <constraint firstItem="ZU3-ox-Sab" firstAttribute="top" secondItem="znf-fN-NKu" secondAttribute="bottom" constant="8" id="KHK-SJ-UPO"/>
+                            <constraint firstItem="i1q-mg-36H" firstAttribute="top" secondItem="ZU3-ox-Sab" secondAttribute="bottom" constant="8" id="Mj4-hp-Q8p"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="znf-fN-NKu" secondAttribute="trailing" id="iDi-mW-Elm"/>
+                            <constraint firstItem="i1q-mg-36H" firstAttribute="centerX" secondItem="ZU3-ox-Sab" secondAttribute="centerX" id="qCx-S0-rj8"/>
                             <constraint firstItem="znf-fN-NKu" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="qbb-cA-FTG"/>
+                            <constraint firstItem="ZU3-ox-Sab" firstAttribute="centerX" secondItem="znf-fN-NKu" secondAttribute="centerX" id="xEU-6B-vL6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="recordingLabel" destination="ZU3-ox-Sab" id="qeQ-nd-EKw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
