@@ -15,42 +15,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znf-fN-NKu">
-                                <rect key="frame" x="182.5" y="438" width="49" height="30"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Record"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znf-fN-NKu">
+                                <rect key="frame" x="129.5" y="375.5" width="155" height="155"/>
+                                <state key="normal" image="Record"/>
                                 <connections>
                                     <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bzj-2F-Cdt"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZU3-ox-Sab">
-                                <rect key="frame" x="156" y="476" width="102" height="21"/>
+                                <rect key="frame" x="156" y="538.5" width="102" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i1q-mg-36H">
-                                <rect key="frame" x="154" y="505" width="106" height="30"/>
-                                <state key="normal" title="Stop Recording"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i1q-mg-36H">
+                                <rect key="frame" x="175" y="567.5" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="Qik-9G-gIY"/>
+                                    <constraint firstAttribute="width" constant="64" id="lSJ-Ks-ede"/>
+                                </constraints>
+                                <state key="normal" image="Stop"/>
                                 <connections>
-                                    <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Ev-be-uqu"/>
+                                    <action selector="stopRecordingAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CZk-3u-yOU"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="i1q-mg-36H" firstAttribute="centerX" secondItem="ZU3-ox-Sab" secondAttribute="centerX" id="8Pk-iY-aIt"/>
                             <constraint firstItem="znf-fN-NKu" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="JGE-kH-X21"/>
                             <constraint firstItem="ZU3-ox-Sab" firstAttribute="top" secondItem="znf-fN-NKu" secondAttribute="bottom" constant="8" id="KHK-SJ-UPO"/>
                             <constraint firstItem="i1q-mg-36H" firstAttribute="top" secondItem="ZU3-ox-Sab" secondAttribute="bottom" constant="8" id="Mj4-hp-Q8p"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="znf-fN-NKu" secondAttribute="trailing" id="iDi-mW-Elm"/>
-                            <constraint firstItem="i1q-mg-36H" firstAttribute="centerX" secondItem="ZU3-ox-Sab" secondAttribute="centerX" id="qCx-S0-rj8"/>
                             <constraint firstItem="znf-fN-NKu" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="qbb-cA-FTG"/>
                             <constraint firstItem="ZU3-ox-Sab" firstAttribute="centerX" secondItem="znf-fN-NKu" secondAttribute="centerX" id="xEU-6B-vL6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="recordButton" destination="znf-fN-NKu" id="jsN-Ll-Uof"/>
                         <outlet property="recordingLabel" destination="ZU3-ox-Sab" id="qeQ-nd-EKw"/>
+                        <outlet property="stopRecordingButton" destination="i1q-mg-36H" id="kvt-Rd-4w6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -58,4 +63,8 @@
             <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Record" width="155" height="155"/>
+        <image name="Stop" width="155" height="155"/>
+    </resources>
 </document>
