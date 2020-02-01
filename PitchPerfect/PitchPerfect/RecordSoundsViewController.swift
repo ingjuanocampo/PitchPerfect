@@ -44,7 +44,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     }
     
     @IBAction func stopRecordingAction(_ sender: Any) {
-        print("record buttom was pressed")
+        print("stop record buttom was pressed")
         recordingLabel.text = "Tap Recording"
         stopRecordingButton?.isEnabled = false
         recordButton?.isEnabled = true
@@ -78,9 +78,19 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
         print("audioRecorderDidFinishRecording")
         if flag {
-            performSegue(withIdentifier: "stopRecording", sender: audioRecorder.url)
+            performSegue(withIdentifier: "stopRecordingSe", sender: audioRecorder.url)
         } else {
             print("Error happened")
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("Prepare segue was called")
+
+        if segue.identifier == "stopRecordingSe" {
+            let playSoundsVC = segue.destination as! PlaySoundViewController
+            let recorderdAudioURL = sender as! URL
+            playSoundsVC.recordedAudioURL = recorderdAudioURL
         }
     }
     
