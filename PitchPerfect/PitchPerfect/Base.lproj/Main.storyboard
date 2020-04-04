@@ -40,7 +40,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="i1q-mg-36H" firstAttribute="centerX" secondItem="ZU3-ox-Sab" secondAttribute="centerX" id="8Pk-iY-aIt"/>
                             <constraint firstItem="znf-fN-NKu" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="JGE-kH-X21"/>
@@ -97,18 +97,18 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="GiZ-NB-N8H">
                                         <rect key="frame" x="0.0" y="228.5" width="382" height="229"/>
                                         <subviews>
-                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVx-Iw-ql1" userLabel="DarthVaderButton">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w8V-Pi-tB2" userLabel="ChipmupButton">
                                                 <rect key="frame" x="0.0" y="0.0" width="191" height="229"/>
-                                                <state key="normal" image="LowPitch"/>
-                                                <connections>
-                                                    <action selector="playSoundForButton:" destination="q32-9C-pc2" eventType="touchUpInside" id="6dL-th-ili"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w8V-Pi-tB2" userLabel="ChipmupButton">
-                                                <rect key="frame" x="191" y="0.0" width="191" height="229"/>
                                                 <state key="normal" image="HighPitch"/>
                                                 <connections>
                                                     <action selector="playSoundForButton:" destination="q32-9C-pc2" eventType="touchUpInside" id="xpN-0o-pDq"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVx-Iw-ql1" userLabel="DarthVaderButton">
+                                                <rect key="frame" x="191" y="0.0" width="191" height="229"/>
+                                                <state key="normal" image="LowPitch"/>
+                                                <connections>
+                                                    <action selector="playSoundForButton:" destination="q32-9C-pc2" eventType="touchUpInside" id="6dL-th-ili"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -146,7 +146,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="hVA-Le-Ty7" firstAttribute="bottom" secondItem="dfj-xs-rJS" secondAttribute="bottom" constant="16" id="7fP-HN-rB4"/>
                             <constraint firstItem="jQd-mP-h4M" firstAttribute="leading" secondItem="hVA-Le-Ty7" secondAttribute="leading" constant="16" id="FbR-KP-EBX"/>
